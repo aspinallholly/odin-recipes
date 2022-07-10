@@ -3,16 +3,47 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link name="stylesheet" href="./styles.css" type="text/css">
+        <link rel="stylesheet" href="./styles.css" type="text/css">
         <title>Odin Recipes</title>
     </head>
-    <body>
+    <header id="index-header">
+        <div class="header-overlay">
         <h1>My Favourite Recipes</h1>
-        <img src="./images-and-links/garlicky-kale-salad-with-spiced-chickpeas.jpg" alt="A plate of garlicky kale salad with spiced chickpeas">
-        <ul>
-            <li><a href="./recipes/vegan-collard-green-wraps.html">Vegan Collard Green Wraps</a></li>
-            <li><a href="./recipes/garlicky-kale-salad-with-crispy-chickpeas.html">Garlicky Kale Salad with Crispy Chickpeas</a></li>
-            <li><a href="./recipes/indian-palak-tofu-curry.html">Indian Palak Tofu Curry</a></li>
-    </ul>
+        </div>
+    </header>
+    <body>
+        <div class="intro">
+            <p id="welcome">Welcome to my recipe repository!</p>
+            <p>Here you will find some of my favourite recipes.<br>Click on a
+             link below to give it a go!</p>
+        </div>
+        <div id="recipe-links">
+            <ul id="index-list">
+                <li class="preview">
+                    <a href="./recipes/vegan-collard-green-wraps.html">
+                        <figure class="image-container">
+                            <img src="./images-and-links/collard-green-wraps.jpg" alt="Vegan collard green wraps" loading="lazy">
+                            <figcaption>Vegan Collard Green Wraps</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="preview">
+                    <a href="./recipes/garlicky-kale-salad-with-crispy-chickpeas.html">
+                        <figure class="image-container">
+                            <img src="./images-and-links/garlicky-kale-salad-with-spiced-chickpeas.jpg" alt="Garlicky kale salad with crispy spiced chickpeas">
+                            <figcaption>Garlicky Kale Salad with Crispy Chickpeas</figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li class="preview">
+                    <a href="./recipes/indian-palak-tofu-curry.html">
+                        <figure class="image-container">
+                            <img src="./images-and-links/indian-palak-tofu.png" alt="Indian Palak tofu curry">
+                            <figcaption>Indian Palak Tofu Curry</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>
