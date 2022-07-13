@@ -1,35 +1,65 @@
 /* Theme colours */
 
 :root {
-    --body-cream: rgb(253, 250, 238);
-    --recipe-tan: rgb(245, 224, 198);
-    --recipe-sand:rgb(231, 202, 164);
-    --footer-brown: rgb(231, 198, 158);
-    
+    --body-cream: rgb(248, 242, 225);
+    --recipe-tan: rgb(224, 198, 165);
+    --recipe-sand:rgb(223, 174, 109);
+    --footer-brown: rgb(179, 133, 79);
+    --nav-link: rgb(105, 73, 51);
+    --nav-link-hover: rgb(115, 194, 135);
 }
 
 /* Theme Text Styling */
 
 h1, .intro, .recipe-title {
     text-align: center;
+    color: #160101;
 }
 
-p, figcaption, .ingredients-list, .steps-list {
+p, figcaption, .ingredients-list, .steps-list, nav a {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
 }
 
+/* NAV BAR STYLING */
+
+nav {
+    background-color: rgb(238, 229, 206);
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    column-gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--nav-link);
+    font-size: 24px;
+}
+
+nav a:hover {
+    color: var(--nav-link-hover);
+}
+
+#site-name {
+    padding-left: 10px;
+    color: var(--nav-link)
+}
+
+nav a:hover > #site-name {
+    color: var(--nav-link-hover);
+}
 
 /* HEADER STYLING */
 
 header {
     background-image: url("./images-and-links/basil-tomato-header.jpg");
     background-size: cover;
+    display: block;
 }
 
 .header-overlay{
-   background-color: rgba(0,0,0, 0.2); 
-}
+   background-color: rgba(0,0,0, 0.2);
+   height: 250px; 
+   }
 
 
 h1 {
@@ -40,7 +70,6 @@ h1 {
     margin-top: 0;
     color: #fff;
 }
-
 
 /* MAIN BODY STYLING */
 
@@ -53,10 +82,10 @@ body {
 /* index.html body styling */
 
 .intro {
-    width: 600px;
+    width: 100%;
     display: block;
     margin: 0 auto;
-    padding: 10px 10px 20px 10px;
+    padding: 30px 0 50px 0;
 }
 
 .intro p {
@@ -77,6 +106,7 @@ body {
     background-color: var(--recipe-tan);
     padding: 20px 0 20px 0;
 }
+
 
 #index-list {
     list-style: none;
@@ -103,6 +133,7 @@ body {
 figure {
     display: flex;
     flex-flow: column;
+    position: relative;
 }
 
 figcaption {
@@ -115,7 +146,6 @@ figcaption {
     padding: 20px 0 22px 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    overflow: hidden;
     opacity: 0;
 }
 
@@ -165,11 +195,11 @@ span {
 }
 
 .recipe-container {
-    background-color: var(--recipe-tan);
     margin-bottom: 20px;
 }
 
 .recipe-ingredients, .recipe-steps, .recipe-notes {
+    background-color: var(--recipe-tan);
     padding: 10px 20px 10px 20px;
 }
 
@@ -202,7 +232,7 @@ span {
 
 /* Curved bottom edges of 'Steps' div when there is no 'Notes' div */
 
-.recipe-container.no-notes {
+.recipe-steps.no-notes {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -214,15 +244,16 @@ footer {
     padding: 10px;
     text-align: center;
     line-height: 40px;
+    color: rgb(247, 248, 241);
 }
 
 footer a {
-    color: #07551b;
+    color: rgb(133, 238, 119);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #1fa03f;
+    color: rgb(2, 99, 26);
 }
 
 .bold {
@@ -231,7 +262,26 @@ footer a:hover {
 
 /* RESPONSIVE MEDIA QUERIES */
 
-@media (max-width: 900px) {
+/* Medium devices */
+@media only screen and (max-width: 900px) {
+    
+    .preview img {
+        width: 500px;
+        height: 500px;
+    }
+
+    figcaption {
+        top: 440px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+} 
+
+/* Small devices */
+@media only screen and (max-width: 767px) {
+
     .preview img {
         width: 500px;
         height: 600px;
@@ -239,6 +289,32 @@ footer a:hover {
 
     figcaption {
         top: 540px;
+    }
+} 
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+
+    header {
+        height: 350px !important;
+    }
+
+    .header-overlay {
+        height: 350px !important;
+    }
+
+    h1 {
+        height: 350px;
+        line-height: 350px;
+    }
+    
+    .preview img {
+        width: 450px;
+        height: 450px;
+    }
+
+    figcaption {
+        top: 390px;
     }
 
     h1 {
