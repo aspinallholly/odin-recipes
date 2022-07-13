@@ -7,11 +7,13 @@
     --footer-brown: rgb(179, 133, 79);
     --nav-link: rgb(105, 73, 51);
     --nav-link-hover: rgb(115, 194, 135);
+    --link-green: rgb(147, 235, 135);
+    --link-green-hover: rgb(2, 99, 26);
 }
 
 /* Theme Text Styling */
 
-h1, .intro, .recipe-title {
+.intro, .recipe-title, #attribution {
     text-align: center;
     color: #160101;
 }
@@ -44,16 +46,18 @@ nav a:hover {
     color: var(--nav-link)
 }
 
-nav a:hover > #site-name {
+nav a:hover #site-name {
     color: var(--nav-link-hover);
 }
 
 /* HEADER STYLING */
 
 header {
+    height: 250px;
     background-image: url("./images-and-links/basil-tomato-header.jpg");
     background-size: cover;
     display: block;
+    margin: 0 auto;
 }
 
 .header-overlay{
@@ -61,14 +65,21 @@ header {
    height: 250px; 
    }
 
+#h1-flex-wrap {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4em;
-    height: 250px;
-    line-height: 250px;
-    margin-top: 0;
+    font-size: 3em;
     color: #fff;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0 10px;
 }
 
 /* MAIN BODY STYLING */
@@ -97,6 +108,20 @@ body {
     font-size: 25px;
     padding-bottom: 15px;
     font-weight: bold;
+}
+
+#attribution {
+    padding: 15px 0 40px 0;
+    font-size: 22px;
+}
+
+#attribution a {
+    text-decoration: none;
+    color: var(--nav-link)
+}
+
+#attribution a:hover {
+    color: var(--nav-link-hover)
 }
 
 /* Responsive recipe image cards*/
@@ -248,12 +273,12 @@ footer {
 }
 
 footer a {
-    color: rgb(133, 238, 119);
+    color: var(--link-green);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: rgb(2, 99, 26);
+    color: var(--link-green-hover);
 }
 
 .bold {
@@ -275,12 +300,13 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 } 
 
 /* Small devices */
 @media only screen and (max-width: 767px) {
+
 
     .preview img {
         width: 500px;
@@ -289,6 +315,9 @@ footer a:hover {
 
     figcaption {
         top: 540px;
+    }
+    h1 {
+        font-size: 3em;
     }
 } 
 
@@ -303,9 +332,8 @@ footer a:hover {
         height: 350px !important;
     }
 
-    h1 {
-        height: 350px;
-        line-height: 350px;
+    #h1-flex-wrap {
+        height: 350px !important;
     }
     
     .preview img {
