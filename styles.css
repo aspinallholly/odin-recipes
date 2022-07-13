@@ -34,7 +34,7 @@ header {
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 4em;
     height: 250px;
     line-height: 250px;
     margin-top: 0;
@@ -74,7 +74,8 @@ body {
 
 
 #recipe-links {
-    background-color: var(--recipe-tan);  
+    background-color: var(--recipe-tan);
+    padding: 20px 0 20px 0;
 }
 
 #index-list {
@@ -82,13 +83,13 @@ body {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 .preview
 {
     padding-top: 15px;
+    padding-bottom: 15px;
     
 }
 
@@ -206,6 +207,27 @@ span {
     border-bottom-right-radius: 20px;
 }
 
+/* FOOTER STYLING */
+
+footer {
+    background-color: var(--footer-brown);
+    padding: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+footer a {
+    color: #07551b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #1fa03f;
+}
+
+.bold {
+    font-weight: bold;
+}
 
 /* RESPONSIVE MEDIA QUERIES */
 
@@ -217,5 +239,9 @@ span {
 
     figcaption {
         top: 540px;
+    }
+
+    h1 {
+        font-size: 2.5em;
     }
 }
